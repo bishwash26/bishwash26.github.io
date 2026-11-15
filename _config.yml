@@ -1,0 +1,42 @@
+title: Bishwash Pokhrel
+description: AI engineer building agentic workflows, RAG pipelines and LLM systems in production. Notes on agents, evals and back-end engineering.
+author: Bishwash Pokhrel
+url: "https://bishwash26.github.io"
+baseurl: ""
+lang: en
+
+# Shown in the header prompt: user@host:~$
+prompt_user: bishwash
+prompt_host: dev
+
+social:
+  github: bishwash26
+  linkedin: bishwash08
+  email: bishwash.pokhrel1@gmail.com
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+permalink: /blog/:year/:month/:title/
+timezone: Asia/Kolkata
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: feed.xml
+
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

@@ -1,0 +1,130 @@
+---
+layout: default
+title: Bishwash Pokhrel — AI Engineer
+---
+
+<section class="hero">
+  <p class="cmd"><span class="ps">$</span> whoami</p>
+  <h1>Bishwash Pokhrel</h1>
+  <p class="role">AI Engineer · Agentic AI &amp; LLM Systems</p>
+  <p class="lede">
+    Senior Software Engineer at <strong>Cvent</strong> in Gurugram. I design and ship agentic workflows,
+    RAG pipelines, guardrails and eval frameworks, and build internal AI tools that automate engineering
+    work at scale. Before AI, I spent years on Java microservices and AWS, so I care about the boring
+    parts too: tracing, reliability and things that don't fall over in production.
+  </p>
+  <p class="hero-links">
+    <a class="btn" href="{{ '/blog/' | relative_url }}">read the blog →</a>
+    <a href="https://github.com/{{ site.social.github }}">github</a>
+    <a href="https://www.linkedin.com/in/{{ site.social.linkedin }}/">linkedin</a>
+    <a href="mailto:{{ site.social.email }}">email</a>
+  </p>
+</section>
+
+<section id="work" class="section">
+  <h2><span class="ps">$</span> ls ~/things-i-built</h2>
+  <div class="grid">
+    <article class="card">
+      <p class="card-kicker">agents</p>
+      <h3>Agentic CSN workflow</h3>
+      <p>A company-critical agentic workflow with agent memory, evaluators, tracing, tool calling and MCP server integration.</p>
+      <p class="stack">memory · tool-calling · MCP · evals</p>
+    </article>
+    <article class="card">
+      <p class="card-kicker">internal tool</p>
+      <h3>Cvent Imagine</h3>
+      <p>An AI rapid-prototyping tool that generates alternative screen designs and working prototypes, so stakeholders can compare options side by side and decide faster.</p>
+      <p class="stack">genAI · prototyping</p>
+    </article>
+    <article class="card">
+      <p class="card-kicker">internal tool</p>
+      <h3>AI-Help</h3>
+      <p>Automates large-scale engineering campaigns across services: framework upgrades, patch fixes and vulnerability remediation.</p>
+      <p class="stack">agents · codemods · automation</p>
+    </article>
+    <article class="card">
+      <p class="card-kicker">rag</p>
+      <h3>Venue Recommendation RAG</h3>
+      <p>End to end: ingestion, embeddings, vector DB, retrieval, reranking, prompt construction and generation, plus the evaluation criteria to judge it.</p>
+      <p class="stack">embeddings · vector db · reranking</p>
+    </article>
+    <article class="card highlight">
+      <p class="card-kicker">product</p>
+      <h3>AI-powered RFP Builder</h3>
+      <p>A prompt-guided workflow that cut form completion from 30–35 minutes to under 5. Reliability tracked with evals in Arize Phoenix.</p>
+      <p class="metric">80%+ <span>faster for clients</span></p>
+    </article>
+    <article class="card">
+      <p class="card-kicker">systems</p>
+      <h3>Email → RFP pipeline</h3>
+      <p>An event-driven, asynchronous system that turns emails into RFPs using Amazon SQS, Java consumers and agentic APIs.</p>
+      <p class="stack">SQS · Java · async</p>
+    </article>
+    <article class="card">
+      <p class="card-kicker">safety</p>
+      <h3>Guardrails for AI agents</h3>
+      <p>Safety guardrails for production agents built on AWS Bedrock models.</p>
+      <p class="stack">bedrock · guardrails</p>
+    </article>
+    <article class="card">
+      <p class="card-kicker">reliability</p>
+      <h3>99.99% availability</h3>
+      <p>Raised a core service to four nines and cut page load time by 33% by fixing SLIs and optimizing user-facing pages. Service owner and primary POC.</p>
+      <p class="metric">−33% <span>page load</span></p>
+    </article>
+    <article class="card">
+      <p class="card-kicker">research</p>
+      <h3>Drishti</h3>
+      <p>A computer-vision assistant for the visually impaired, with currency recognition and text extraction from images. Co-authored the paper published at IEEE PDGC.</p>
+      <p class="stack"><a href="https://ieeexplore.ieee.org/document/10053304">read the IEEE paper ↗</a></p>
+    </article>
+  </div>
+</section>
+
+<section id="experience" class="section">
+  <h2><span class="ps">$</span> git log --career</h2>
+  <ol class="timeline">
+    <li>
+      <p class="t-when">Sep 2026 — now</p>
+      <p class="t-what"><strong>Senior Software Engineer</strong> · Cvent, Gurgaon</p>
+    </li>
+    <li>
+      <p class="t-when">Sep 2024 — Sep 2026</p>
+      <p class="t-what"><strong>Software Engineer II</strong> · Cvent, Gurgaon</p>
+    </li>
+    <li>
+      <p class="t-when">Jan 2022 — Jun 2022</p>
+      <p class="t-what"><strong>Software Engineer Intern</strong> · McKinsey &amp; Company</p>
+      <p class="t-note">Built SQL generation logic in Python for client-ERP ETL processes, 40% faster.</p>
+    </li>
+    <li>
+      <p class="t-when">2018 — 2022</p>
+      <p class="t-what"><strong>B.Tech, Computer Science</strong> · Punjab Engineering College, Chandigarh</p>
+    </li>
+  </ol>
+</section>
+
+<section id="stack" class="section">
+  <h2><span class="ps">$</span> cat stack.yml</h2>
+  <pre class="yaml"><code><span class="k">agents:</span>    [LangGraph, LangChain, Mastra, MCP, multi-agent, tool calling, agent memory]
+<span class="k">llm_ops:</span>   [evals, Arize Phoenix, tracing, embeddings, vector DBs, reranking, AWS Bedrock]
+<span class="k">backend:</span>   [Java, Spring Boot, Dropwizard, microservices, GraphQL, SQS, RabbitMQ, PostgreSQL]
+<span class="k">also:</span>      [JavaScript, React, AWS, Jenkins, Datadog]</code></pre>
+</section>
+
+<section class="section">
+  <h2><span class="ps">$</span> ls -t ~/blog | head</h2>
+  {% if site.posts.size > 0 %}
+  <ul class="post-list">
+    {% for post in site.posts limit:5 %}
+    <li>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  <p><a href="{{ '/blog/' | relative_url }}">all posts →</a></p>
+  {% else %}
+  <p class="muted">No posts yet. Soon.</p>
+  {% endif %}
+</section>

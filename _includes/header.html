@@ -1,0 +1,12 @@
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="prompt" href="{{ '/' | relative_url }}">
+      <span class="p-user">{{ site.prompt_user }}</span><span class="p-dim">@</span><span class="p-host">{{ site.prompt_host }}</span><span class="p-dim">:</span><span class="p-path">~</span><span class="p-dim">$</span><span class="cursor" aria-hidden="true"></span>
+    </a>
+    <nav class="nav">
+      <a href="{{ '/#work' | relative_url }}">./work</a>
+      <a href="{{ '/#experience' | relative_url }}">./experience</a>
+      <a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog/' %}class="active"{% endif %}>./blog</a>
+    </nav>
+  </div>
+</header>
